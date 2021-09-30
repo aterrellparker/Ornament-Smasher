@@ -1,0 +1,284 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+canvas {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    
+}
+.background {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+#viseur {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-37px;
+    margin-left:-37px;
+    z-index: 3;
+    visibility: hidden;
+}
+.Title1 {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  font: normal 76px/1 "amaranth", Helvetica, sans-serif;
+  color: #0096ff;
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  z-index: 15;
+}
+.menupopup {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 25%;
+  right: 25%;
+  bottom: 25%;
+  left: 25%;
+  padding: 20px;
+  overflow: hidden;
+  border: none;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  font: normal 16px/1 "Times New Roman", Times, serif;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: rgba(220,220,220,0.7);
+  -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3) ;
+  box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3) ;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2) ;
+  z-index: 10;
+  visibility: hidden;
+}
+.menubutton {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 300px;
+  cursor: pointer;
+    position: fixed;
+  padding: 10px 20px;
+  border: 1px solid #018dc4;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font: normal 16px/normal "Times New Roman", Times, serif;
+  color: rgba(255,255,255,0.9);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #0199d9;
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+  text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  z-index: 3;
+}
+.uihealth {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 160px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  border: none;
+  -webkit-border-radius: 0 15px 0 0;
+  border-radius: 0 15px 0 0;
+  font: normal 16px/1 "Times New Roman", Times, serif;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: #5a5a5a;
+  -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3) ;
+  box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3) ;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2) ;
+   z-index: 1;
+   visibility: hidden;
+}
+.snowballreload {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 160px;
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  border: none;
+   -webkit-border-radius: 50px 0 0 / 25px 0 0;
+  border-radius: 50px 0 0 / 25px 0 0;
+  font: normal 16px/1 "Times New Roman", Times, serif;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: #5a5a5a;
+  -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3) ;
+  box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3) ;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2) ;
+   z-index: 1;
+   visibility: hidden;
+}
+.minimap {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 200px;
+  height: 200px;
+  padding: 25px;
+  overflow: hidden;
+  border: 20px solid rgba(90,90,90,1);
+  -webkit-border-radius: 250px;
+  border-radius: 250px;
+  font: normal 16px/1 "Times New Roman", Times, serif;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: rgba(220,220,220,0);
+  -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3) ;
+  box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3) ;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2) ;
+  z-index: 1;
+  visibility: hidden;
+}
+ .pointcontainer {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 125px;
+  height: 0;
+  position: absolute;
+  top: 0px;
+  right: 150px;
+  padding: 20px;
+  overflow: hidden;
+  border: 7px solid rgba(90,90,90,1);
+  -webkit-border-radius: 0 0 100px / 0 0 67px;
+  border-radius: 0 0 100px / 0 0 67px;
+  font: normal 27px/0 Impact, Charcoal, sans-serif;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  text-indent: -128px;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: #0199d9;
+  -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3) ;
+  box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3) ;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2) ;
+  visibility: hidden;
+  z-index: 2;
+}
+.deathcontainer {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 125px;
+  height: 0;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 20px;
+  overflow: hidden;
+  border: 7px solid rgba(90,90,90,1);
+ -webkit-border-radius: 0 0 0 100px / 0 0 0 67px;
+  border-radius: 0 0 0 100px / 0 0 0 67px;
+  font: normal 27px/0 Impact, Charcoal, sans-serif;
+  color: rgba(255,255,255,1);
+  text-align: center;
+   text-indent: 128px;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: #e74c3c;
+  -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3) ;
+  box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3) ;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2) ;
+  visibility: hidden;
+  z-index: 2;
+}
+.dead {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 100%;
+  position: absolute;
+  cursor: pointer;
+  top: 0px;
+  padding: 0px;
+  overflow: hidden;
+  border-top: 200px solid rgba(0,0,0,0.7);
+  border-right: auto solid rgba(0,0,0,0.7);
+  border-bottom: 700px solid rgba(0,0,0,0.7);;
+  border-left: auto solid rgba(0,0,0,0.7);
+  font: normal 16px/1 "Times New Roman", Times, serif;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: rgba(255,0,0,0.61);
+  -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3) ;
+  box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3) ;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2) ;
+  visibility: hidden;
+  z-index: 4;
+}
+.deathbutton {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 60px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 1px solid rgba(255,0,0,1);
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font: normal 16px/normal "Times New Roman", Times, serif;
+  color: rgba(255,255,255,0.9);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(255,0,0,0.7);
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+  text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  visibility: hidden;
+  z-index: 4;
+}

@@ -1,1 +1,118 @@
-hello world
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script src="js/babylon.1.14-beta-debug.js"></script>
+    <script src="js/Oimo.js"></script>
+    <script src="water/babylon.waterMaterial.js"></script>
+    <script src="js/Player.js"></script>
+    <script src="js/Target.js"></script>
+    <script src="js/Weapon.js"></script>
+    <script src="js/Arena.js"></script>
+    <script src="js/Game.js"></script>
+    <script src="js/Boss.js"></script>
+    <script src="js/snowstorm.js"></script>
+</head>
+<body id="thebody">
+<div id="Title1" class="Title1">          Penguin 
+Valor
+</div>
+<!-- required snowstorm JS, default behaviour -->
+
+
+<!-- now, we'll customize the snowStorm object -->
+<script>
+snowStorm.freezeOnBlur = true;//Freeze when out of focus
+snowStorm.flakesMaxActive = 96;    // show more snow on screen at once
+snowStorm.useTwinkleEffect = true; // let the snow flicker in and out of view
+</script>
+<img id="background" class="background" src="assets/Background.jpg" />
+<br>
+     <br>
+     <br>
+     <br>
+     <br><br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+ <div id="start" class="menubutton" onclick="startbutton()" ><h1>Start</h1>
+         <script>
+             function startbutton() {
+    document.getElementById("start").style.visibility = "hidden";
+    document.getElementById("options").style.visibility = "hidden";
+    document.getElementById("help").style.visibility = "hidden";
+    document.getElementById("Help").style.visibility = "hidden";
+    document.getElementById("Title1").style.visibility = "hidden";
+    document.getElementById("background").style.visibility = "hidden";
+    document.getElementById("ammo").style.visibility = "visible"; 
+    document.getElementById("map").style.visibility = "visible"; 
+    document.getElementById("healthbar").style.visibility = "visible"; 
+    document.getElementById("points").style.visibility = "visible"; 
+    document.getElementById("deaths").style.visibility = "visible"; 
+    document.getElementById("viseur").style.visibility = "visible"; 
+    document.getElementById("renderCanvas").style.visibility = "visible"; 
+    snowStorm.stop();
+    new Game('renderCanvas');
+      }
+             
+         </script>
+     </div>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <div class="menubutton" id="options" onclick="">
+         <h1>options</h1>
+     </div>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <div class="menubutton" id="help" onclick="Help()">
+         <h1>help</h1>
+               <script>
+             function Help() {
+                 var i = 1;
+    if(i === 1){
+    document.getElementById("Help").style.visibility = "visible";
+    i += -1;
+    }
+    if(i === 0){
+    document.getElementById("Help").style.visibility = "hidden";
+    i += 1;
+    
+      }
+      }
+             
+         </script>
+     </div>
+     <div id="Help" class="menupopup" >
+   -Welcome to ornament smasher
+   -Try to get the most points!
+   -But make sure not to run out of ammo
+     </div>
+     <div id="healthbar" class="uihealth">h</div>
+     <div id="ammo" class="snowballreload"><h2>snowballs:15</h2></div>
+     <div id="map" class="minimap"><h1>Sorrry Minimap<br> isn't working</h1><br>I dont care what you think</div>
+     <div id="points" class="pointcontainer">0 <h5>points</h5></div>
+     <div id="deaths" class="deathcontainer">1 <h5>lives</h5></div>
+     <div id="ammolose" class="dead"><h1>YOU LOSE</h1><h5>out of ammo</h5><h5>Press esc for mouse</h5><br><a href="http://goo.gl/leY5Ee"><h5>Refresh</h5></a></div>
+    <img id="viseur" src="assets/viseur.png" />
+    <!--<canvas id="guiCanvas"></canvas>-->
+    <canvas id="renderCanvas"></canvas>
+	
+</body>
+</html>
